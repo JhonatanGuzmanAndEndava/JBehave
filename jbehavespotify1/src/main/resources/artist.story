@@ -1,11 +1,14 @@
-Meta:
+Feature:
+As a user 
+I want to get information about an artist
+So that I can get an artist
 
-Narrative:
-As a user
-I want to perform an action
-So that I can achieve a business goal
-
-Scenario: scenario description
-Given a system state
-When I do something
-Then system is in a different state
+  Scenario: when user provides an artist id, user recoveries artist name
+     Given an id that belongs to Juanes artist
+     When user executes artist api
+     Then user gets Juanes name
+     
+  Scenario: when user doesn't provide an id, user gets exception
+     Given a fake artist id
+     When user executes artist api it will throw exception
+     Then user gets artist NullPointerException
