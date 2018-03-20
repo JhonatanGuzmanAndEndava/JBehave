@@ -8,7 +8,7 @@ So that I can get an artist
      When user executes artist api
      Then user gets Juanes name
      
-  Scenario: when user doesn't provide an id, user gets exception
+  Scenario: when user doesn't provide a valid id, user gets exception
      Given a fake artist id
      When user executes artist api it will throw exception
      Then user gets artist NullPointerException
