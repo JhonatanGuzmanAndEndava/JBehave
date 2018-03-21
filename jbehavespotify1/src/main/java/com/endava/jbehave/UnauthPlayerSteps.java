@@ -1,5 +1,6 @@
 package com.endava.jbehave;
 
+import com.google.gson.JsonParser;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
 import com.wrapper.spotify.requests.data.player.StartResumeUsersPlaybackRequest;
@@ -7,9 +8,10 @@ import net.thucydides.core.annotations.Step;
 
 import java.io.IOException;
 
-public class PlayerSteps {
+public class UnauthPlayerSteps {
 
-    private SpotifyApi spotifyApi = Configuration.spotifyInstance();
+    //private SpotifyApi spotifyApi = Configuration.spotifyClientCredentialInstance();
+    private SpotifyApi spotifyApi = Configuration.spotifyAuthorizationInstance();
 
     private StartResumeUsersPlaybackRequest startResumeUsersPlaybackRequest;
 
@@ -17,7 +19,9 @@ public class PlayerSteps {
 
     @Step("Given an uri that belongs to A Dios Le Pido track")
     public void an_uri_that_belongs_to_a_dios_le_pido_track(String uri) {
-        startResumeUsersPlaybackRequest = spotifyApi.startResumeUsersPlayback().context_uri(uri).build();
+        startResumeUsersPlaybackRequest = spotifyApi.startResumeUsersPlayback()
+                .uris(new JsonParser().parse("[\""+uri+"\"]").getAsJsonArray())
+                .build();
     }
 
     @Step("When user executes Player api")

@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class TrackSteps {
 
-    private SpotifyApi spotifyApi = Configuration.spotifyInstance();
+    private SpotifyApi spotifyApi = Configuration.spotifyClientCredentialInstance();
 
     private GetTrackRequest getTrackRequest;
     private Track track;

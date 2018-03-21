@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 
 public class AlbumSteps {
 
-    private SpotifyApi spotifyApi = Configuration.spotifyInstance();
+    private SpotifyApi spotifyApi = Configuration.spotifyClientCredentialInstance();
 
     private GetAlbumRequest getAlbumRequest;
     private Album album;
