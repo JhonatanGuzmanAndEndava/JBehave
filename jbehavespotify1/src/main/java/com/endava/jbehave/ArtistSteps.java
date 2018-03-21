@@ -2,6 +2,7 @@ package com.endava.jbehave;
 
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
+import com.wrapper.spotify.exceptions.detailed.BadRequestException;
 import com.wrapper.spotify.model_objects.specification.Artist;
 import com.wrapper.spotify.requests.data.artists.GetArtistRequest;
 import net.thucydides.core.annotations.Step;
@@ -39,7 +40,7 @@ public class ArtistSteps {
     }
 
     @Step("When user executes artist api it will throw exception")
-    public void user_executes_artist_api_it_will_throw_exception() throws Throwable {
+    public void user_executes_artist_api_it_will_throw_exception() throws Exception {
         artist = getArtistRequest.execute();
     }
 
@@ -48,9 +49,9 @@ public class ArtistSteps {
         assertEquals(artist.getName(), "Juanes");
     }
 
-    @Step("Then user gets NullPointerException")
-    public void user_gets_artist_nullpointerexception() throws Throwable {
-        artist.getName();
+    @Step("Then user gets a value null as result")
+    public String user_gets_artist_nullpointerexception() {
+        return artist.getName();
     }
 
 }

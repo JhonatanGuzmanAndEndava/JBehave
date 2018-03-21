@@ -13,6 +13,16 @@ So that I can get an album
      When user executes album api
      Then user gets Juanes name from album
 
+  Scenario: When user provides an album id, user gets number of songs in it
+     Given an id that belongs to Un dia normal album from Juanes
+     When user executes album track api
+     Then user gets number of songs who is eleven
+
+  Scenario: When user provides an album id, user gets number of songs in it
+     Given an id that belongs to Un dia normal album from Juanes
+     When user executes album track api
+     Then user gets names of each song
+
   Scenario: when user doesn't provide an id, user gets exception
      Given a fake album id
      When user executes album api it will throw exception

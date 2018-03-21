@@ -20,7 +20,7 @@ public class Configuration {
     private static final URI REDIRECTURI = SpotifyHttpManager.makeUri("http://example.com/callback");
     private static final String SCOPES = "user-modify-playback-state, user-read-playback-state, user-follow-read, user-follow-modify, playlist-modify-public, playlist-modify-private, playlist-read-private, playlist-read-collaborative";
 
-    private static final String URICODE = "AQACRYI1GkVKsiUOFmwBRD3J1v3YeLK8hiUrQDW0QJquSQoiwsVRyWQMozJ083NJ7VSKO1HWorlVO79f3IP6Uks-Y7N3C1xs_NrCVFUq79QJe2bpZkeb_Mq_Y1cZ7nmXeI-4JTDf47s7IhJsGnhSs2iApu12DYOleqht1LprdqH61iEvWwTzSTY1XItrCYpBo-Xqx5LaYJavWpRg0L0OBO6gk_wAcdLN0tI17JGx_teKuBrMLu4Ls7vpUG36eRlk4b8RBkaq1dXRX8OwtL4xc6KFiaWD5I8jvWQ621_rhiaPVk9ZTuw7lIHzEj992g4xOaHV5VaXnWS6JyYXdOHvt_QfJRG2QuFYgyekj2oljhB_9VYWyVVtYkUUOk78e30pR_5GA_s3kP-lPCpz0XPU9TZ0IHn4dKiACtMLPMesNED73zDk1GqOEqe_KTGN6Ky_Hq4";
+    private static final String URICODE = "AQCowSrnMpvOCaFOQFGWLMPOpUoWbEtWwsP-pVbT8J7fwndDXQ3y5KpDq9I14u-XIhMFlKRn-5hPW3G__B19-vxFviW6koT5cUgy0PRfqCXP4jftyVU-MrXzyeeBanNttE-uB2oMC3W0HXArNV4qQIEJ_478s7CDYJ9Tq37ESIn5h5qtwr6svBDT4khF3z3ue7ej18REuxpmwANWYWbYfnZ3oh7tvIbIEh6a3jtFGTg15W48AkkQyXgXDpS4yszIPVzxJIo2obqeu2W12-n28xwwjcPSVkThOp6PCLu9A7GsQ0vhC2XXTGHvKOvWMe4KPAi1JxDfqzqF08FH4vdDT7VoetA2K8Z4mGT9ftw_2aimDUMtT0ODDwOPXb-mWoPP717rj3qIqIW983zL9Jk2r9gVLnCuFQvUWd4hK7Be7D8jvY1-bw-psMLY_pH7-hl91a8";
 
     private static AuthorizationCodeCredentials authorizationCodeCredentials;
     private static String authCode;
