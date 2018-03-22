@@ -1,0 +1,24 @@
+scopes:
+
+Player:
+user-modify-playback-state
+user-read-playback-state
+
+Browse:
+user-follow-read
+user-follow-modify
+
+Follow:
+playlist-modify-public
+playlist-modify-private
+
+
+Playlist:
+playlist-read-private
+playlist-read-collaborative
+
+
+"user-modify-playback-state, user-read-playback-state, user-follow-read, user-follow-modify, playlist-modify-public, playlist-modify-private, playlist-read-private, playlist-read-collaborative"
+
+
+https://accounts.spotify.com:443/authorize?client_id=6d27a1bcfddc4d8b909a415f78ea1233&response_type=code&redirect_uri=http%3A%2F%2Fexample.com%2Fcallback&scope=user-modify-playback-state%2C+user-read-playback-state%2C+user-follow-read%2C+user-follow-modify%2C+playlist-modify-public%2C+playlist-modify-private%2C+playlist-read-private%2C+playlist-read-collaborative&show_dialog=true

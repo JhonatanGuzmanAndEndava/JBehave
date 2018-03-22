@@ -1,12 +1,12 @@
 package com.endava.jbehave.steps;
 
-import static org.junit.Assert.assertTrue;
-
-import java.util.Random;
-
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
+
+import java.util.Random;
+
+import static org.junit.Assert.assertTrue;
 
 public class IncreaseSteps {
 	private int counter;
