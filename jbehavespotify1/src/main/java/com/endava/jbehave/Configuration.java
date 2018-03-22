@@ -29,10 +29,8 @@ public class Configuration {
     private static SpotifyApi spotifyApi;
 
     public static SpotifyApi spotifyClientCredentialInstance() {
-        if(spotifyApi == null) {
-            buildWithStandardConf();
-            setTokenCredentials();
-        }
+        buildWithStandardConf();
+        setTokenCredentials();
         return spotifyApi;
     }
 
