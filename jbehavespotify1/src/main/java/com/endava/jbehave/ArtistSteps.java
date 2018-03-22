@@ -18,17 +18,12 @@ public class ArtistSteps {
     private GetArtistRequest getArtistRequest;
     private Artist artist;
 
-    @Step("Given an id that belongs to Juanes artist")
-    public void an_id_that_belongs_to_juanes_artist(String juanesId) {
-        getArtistRequest = spotifyApi.getArtist(juanesId).build();
+    @Step
+    public void an_id_that_belongs_to_artist(String id) {
+        getArtistRequest = spotifyApi.getArtist(id).build();
     }
 
-    @Step("Given a fake artist id")
-    public void a_fake_artist_id(String fakeId) {
-        getArtistRequest = spotifyApi.getArtist(fakeId).build();
-    }
-
-    @Step("When user executes artist api")
+    @Step
     public void user_executes_artist_api() {
         try {
             artist = getArtistRequest.execute();
@@ -39,19 +34,14 @@ public class ArtistSteps {
         }
     }
 
-    @Step("When user executes artist api it will throw exception")
-    public void user_executes_artist_api_it_will_throw_exception() throws Exception {
-        artist = getArtistRequest.execute();
-    }
-
-    @Step("Then user gets Juanes name")
+    @Step
     public void user_gets_juanes_name() {
         assertEquals(artist.getName(), "Juanes");
     }
 
-    @Step("Then user gets a value null as result")
-    public String user_gets_artist_nullpointerexception() {
-        return artist.getName();
+    @Step
+    public void user_gets_artist_name(String artistName) {
+        assertEquals(artist.getName(), artistName);
     }
 
 }
